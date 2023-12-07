@@ -31,6 +31,8 @@ Some important details to consider before to use it are:
 
   - Additional Details:
   - Examples:
+
+  - [Back to menu](#features) 
   
 ## Activity 2
 ### Details:
@@ -46,6 +48,8 @@ Some important details to consider before to use it are:
 
   - Additional Details:
   - Examples:
+
+  - [Back to menu](#features) 
   
 ## Activity 3
 ### Details:
@@ -61,6 +65,8 @@ Some important details to consider before to use it are:
 
   - Additional Details:
   - Examples:
+
+  - [Back to menu](#features) 
   
 ## Activity 4
 ### Details:
@@ -76,6 +82,8 @@ Some important details to consider before to use it are:
 
   - Additional Details:
   - Examples:
+
+  - [Back to menu](#features) 
   
 ## Activity 5
 ### Details:
@@ -107,7 +115,9 @@ You can also:
 
   - Additional Details:
   - Examples:
-  
+
+  - [Back to menu](#features)
+    
 ## Activity N
 You can also:
 ### Details:
