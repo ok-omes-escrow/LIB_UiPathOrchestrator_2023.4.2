@@ -1,0 +1,86 @@
+{
+  "DisplayName": "Get Previous Working Day",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_strCalenderName",
+      "DisplayName": "in_strCalenderName",
+      "Category": null,
+      "Tooltip": "Please Provide Caleder Name from which you wish to read excluded dates. Plesae note Caleder Name must be defined in Orchestrator.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strInputDate",
+      "DisplayName": "in_strInputDate",
+      "Category": null,
+      "Tooltip": "Please Provide Search date in this format - (\"yyyy-MM-dd\").\r\nExample : 2023-12-01 \r\n",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_strPreviousWorkingDay",
+      "DisplayName": "out_strPreviousWorkingDay",
+      "Category": null,
+      "Tooltip": "This will be output in this format - (\"yyyy-MM-dd\").\r\nExample : 2023-12-01 ",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_strCurrentWorkingDay",
+      "DisplayName": "out_strCurrentWorkingDay",
+      "Category": null,
+      "Tooltip": "This will be output in this format - (\"yyyy-MM-dd\").\r\nExample : 2023-12-01 ",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_excMsgInvalidCalenderName",
+      "DisplayName": "in_excMsgInvalidCalenderName",
+      "Category": null,
+      "Tooltip": "Please provide exception message for invalidate Calender name. \r\nExample : Invalid Calender name found. ",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_intMaxLoopCounter",
+      "DisplayName": "in_intMaxLoopCounter",
+      "Category": null,
+      "Tooltip": "Please provide the maximum number of loop iternations to perform. This counter number will prevent code from infinite loop. \r\nExample : in_intMaxLoopCounter=10 , if counter is increased by 10 then exception message will be generated. ",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_excMsgMaxLoopCounter",
+      "DisplayName": "in_excMsgMaxLoopCounter",
+      "Category": null,
+      "Tooltip": "Please provide exception message for maximum counter value reached. \r\nExample : Maximum loop attempts are reached, Please increase IntMaxLoopCounter value and try again.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "DisplayName": "LocateNextworkingDayCurrentDate-Flowchart",
+  "Tooltip": "This flowchart accepts Calender's Excluded Days, input dates, evalutes calender logic and return next previous date(output variable).",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_lstExcludeddateFormatted",
+      "DisplayName": "in_lstExcludeddateFormatted",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strInputDate",
+      "DisplayName": "in_strInputDate",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_strPreviousDateOutput",
+      "DisplayName": "out_strPreviousDateOutput",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}
