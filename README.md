@@ -20,7 +20,7 @@ Note: Calendar functionality in UiPath Orchestrator allows Bot controller to def
 
     | Command | Description |
     | --- | --- |
-    | Input | in_strInputDate : string; in_strCalenderName : string; in_intMaxLoopCounter : int; in_excMsgMaxLoopCounter : string; in_excMsgInvalidCalenderName : string |
+    | Input | in_strInputDate : string; in_strCalendarName : string; in_intMaxLoopCounter : int; in_excMsgMaxLoopCounter : string; in_excMsgInvalidCalendarName : string |
     | Output | out_strCurrentWorkingDay : string ; out_strPreviousWorkingDay : string |
     | Input/Output | io_argument1:type; io_argument2:type; io_argument3:type;|
     | Requirements | NA |
@@ -29,7 +29,7 @@ Note: Calendar functionality in UiPath Orchestrator allows Bot controller to def
 
 
   - Additional Details:
-  - Examples: input: 2023-12-12 ( 12th December is already declared as non-working day in calender)    
+  - Examples: input: 2023-12-12 ( 12th December is already declared as non-working day in calendar)    
     Output: Current date: 2023-12-11  &  Previous date: 2023-12-08
 
     Screenshot :
