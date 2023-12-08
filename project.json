@@ -1,6 +1,6 @@
 {
-  "name": "Holiday Calender",
-  "description": "This Holiday Calender reusable Component accepts accepts input date, Calender name and return next previous working day.",
+  "name": "Holiday Calendar",
+  "description": "This Holiday Calendar reusable Component accepts accepts input date, calendar name and return next previous working day.",
   "main": "NewActivity.xaml",
   "dependencies": {
     "UiPath.System.Activities": "23.4.5",
@@ -10,7 +10,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.5.0",
-  "projectVersion": "0.0.1-alpha",
+  "projectVersion": "0.0.1-alpha.2",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

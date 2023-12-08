@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LocateNextworkingDayCurrentDate_Flowchart" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LocateNextworkingDayCurrentDate_Flowchart" this:LocateNextworkingDayCurrentDate_Flowchart.in_intMaxLoopCounter="10" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_strInputDate" Type="InArgument(x:String)" />
     <x:Property Name="in_lstExcludeddateFormatted" Type="InArgument(scg:List(x:String))" />
@@ -6,11 +6,6 @@
     <x:Property Name="in_intMaxLoopCounter" Type="InArgument(x:Int32)" />
     <x:Property Name="in_excMessageMaxLoopCounter" Type="InArgument(x:String)" />
   </x:Members>
-  <this:LocateNextworkingDayCurrentDate_Flowchart.in_intMaxLoopCounter>
-    <InArgument x:TypeArguments="x:Int32">
-      <Literal x:TypeArguments="x:Int32" Value="10" />
-    </InArgument>
-  </this:LocateNextworkingDayCurrentDate_Flowchart.in_intMaxLoopCounter>
   <sap2010:Annotation.AnnotationText>UPTF00000138eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiVGhpcyBmbG93Y2hhcnQgYWNjZXB0cyBDYWxlbmRlcidzIEV4Y2x1ZGVkIERheXMsIGlucHV0IGRhdGVzLCBldmFsdXRlcyBjYWxlbmRlciBsb2dpYyBhbmQgcmV0dXJuIG5leHQgcHJldmlvdXMgZGF0ZShvdXRwdXQgdmFyaWFibGUpLiIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=</sap2010:Annotation.AnnotationText>
   <sap:VirtualizedContainerService.HintSize>2521.3333333333335,2199.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -110,16 +105,12 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="This flowchart accepts Calender's Excluded Days, input dates, evalutes calender logic and return next previous date(output variable)." DisplayName="LocateNextworkingDay Current Date - Flowchart" sap:VirtualizedContainerService.HintSize="2531.3333333333335,2134.6666666666665" sap2010:WorkflowViewState.IdRef="Flowchart_8">
+  <Flowchart sap2010:Annotation.AnnotationText="This flowchart accepts calendar's Excluded Days, input dates, evalutes calendar logic and return next previous date(output variable)." DisplayName="LocateNextworkingDay Current Date - Flowchart" sap:VirtualizedContainerService.HintSize="2531.3333333333335,2134.6666666666665" sap2010:WorkflowViewState.IdRef="Flowchart_8">
     <Flowchart.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="dt_TempDate" />
       <Variable x:TypeArguments="x:String" Name="strDay" />
       <Variable x:TypeArguments="x:String" Name="strInputDate" />
-      <Variable x:TypeArguments="x:Int32" Name="intLoopCounter">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="intLoopCounter" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -153,7 +144,7 @@
         </Assign.Value>
       </Assign>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Check if Input Date exists in Excluded Date List of Orch Calender&#xA;" Condition="[in_lstExcludeddateFormatted.Contains(strInputDate)]" DisplayName="Flow Decision - Current Date is present in Excluded date list" sap:VirtualizedContainerService.HintSize="160,178.66666666666666" sap2010:WorkflowViewState.IdRef="FlowDecision_21">
+        <FlowDecision x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Check if Input Date exists in Excluded Date List of Orch calendar&#xA;" Condition="[in_lstExcludeddateFormatted.Contains(strInputDate)]" DisplayName="Flow Decision - Current Date is present in Excluded date list" sap:VirtualizedContainerService.HintSize="160,178.66666666666666" sap2010:WorkflowViewState.IdRef="FlowDecision_21">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -187,10 +178,7 @@
                 </sap:WorkflowViewStateService.ViewState>
               </Assign>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID14" DisplayName="Flow Decision - Loop Counter Exceed" sap:VirtualizedContainerService.HintSize="160,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_22">
-                  <FlowDecision.Condition>
-                    <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="intLoopCounter&gt;in_intMaxLoopCounter" />
-                  </FlowDecision.Condition>
+                <FlowDecision x:Name="__ReferenceID14" Condition="[intLoopCounter&gt;in_intMaxLoopCounter]" DisplayName="Flow Decision - Loop Counter Exceed" sap:VirtualizedContainerService.HintSize="160,86.66666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_22">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -554,7 +542,7 @@
                                                   <av:Size x:Key="ShapeSize">200,53.333333333333336</av:Size>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Throw DisplayName="Throw - Loop Counter Exceed Sunday" Exception="[new ApplicationException(in_excMessageMaxLoopCounter)]" sap:VirtualizedContainerService.HintSize="334,91.33333333333331" sap2010:WorkflowViewState.IdRef="Throw_3">
+                                              <Throw DisplayName="Throw - Loop Counter Exceed Sunday" Exception="[new ApplicationException(in_excMessageMaxLoopCounter)]" sap:VirtualizedContainerService.HintSize="200,53.333333333333336" sap2010:WorkflowViewState.IdRef="Throw_3">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -6,8 +6,8 @@
   "OriginalIconFileName": null,
   "Arguments": [
     {
-      "Name": "in_strCalenderName",
-      "DisplayName": "in_strCalenderName",
+      "Name": "in_strCalendarName",
+      "DisplayName": "in_strCalendarName",
       "Category": null,
       "Tooltip": "Please Provide Caleder Name from which you wish to read excluded dates. Plesae note Caleder Name must be defined in Orchestrator.",
       "Placeholder": null,
@@ -50,10 +50,10 @@
       "DataSourceItems": null
     },
     {
-      "Name": "in_excMsgInvalidCalenderName",
-      "DisplayName": "in_excMsgInvalidCalenderName",
+      "Name": "in_excMsgInvalidCalendarName",
+      "DisplayName": "in_excMsgInvalidCalendarName",
       "Category": null,
-      "Tooltip": "Please provide exception message for invalidate Calender name. \r\nExample : Invalid Calender name found. ",
+      "Tooltip": "Please provide exception message for invalidate calendar name. \r\nExample : Invalid calendar name found. ",
       "Placeholder": null,
       "Widget": null,
       "IsRequired": false,
