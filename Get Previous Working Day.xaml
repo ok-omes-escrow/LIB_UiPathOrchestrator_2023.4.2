@@ -1,12 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Get_Next_Previous_Working_Day" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:uasa="clr-namespace:UiPath.Activities.System.Arrays;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property sap2010:Annotation.AnnotationText="Please Provide Search date in this format - (&quot;yyyy-MM-dd&quot;).&#xA;Example : 2023-12-01 &#xA;" Name="in_strInputDate" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="This will be output in this format - (&quot;yyyy-MM-dd&quot;).&#xA;Example : 2023-12-01 " Name="out_strPreviousWorkingDay" Type="OutArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="This will be output in this format - (&quot;yyyy-MM-dd&quot;).&#xA;Example : 2023-12-01 " Name="out_strCurrentWorkingDay" Type="OutArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="Please provide the maximum number of loop iternations to perform. This counter number will prevent code from infinite loop. &#xA;Example : in_intMaxLoopCounter=10 , if counter is increased by 10 then exception message will be generated. " Name="in_intMaxLoopCounter" Type="InArgument(x:Int32)" />
-    <x:Property sap2010:Annotation.AnnotationText="Please provide exception message for maximum counter value reached. &#xA;Example : Maximum loop attempts are reached, Please increase IntMaxLoopCounter value and try again." Name="in_excMsgMaxLoopCounter" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Please Provide Search date in this format - (&quot;yyyy-MM-dd&quot;).&#xD;&#xA;Example : 2023-12-01 &#xD;&#xA;" Name="in_strInputDate" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="This will be output in this format - (&quot;yyyy-MM-dd&quot;).&#xD;&#xA;Example : 2023-12-01 " Name="out_strPreviousWorkingDay" Type="OutArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="This will be output in this format - (&quot;yyyy-MM-dd&quot;).&#xD;&#xA;Example : 2023-12-01 " Name="out_strCurrentWorkingDay" Type="OutArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Please provide the maximum number of loop iternations to perform. This counter number will prevent code from infinite loop. &#xD;&#xA;Example : in_intMaxLoopCounter=10 , if counter is increased by 10 then exception message will be generated. " Name="in_intMaxLoopCounter" Type="InArgument(x:Int32)" />
+    <x:Property sap2010:Annotation.AnnotationText="Please provide exception message for maximum counter value reached. &#xD;&#xA;Example : Maximum loop attempts are reached, Please increase IntMaxLoopCounter value and try again." Name="in_excMsgMaxLoopCounter" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Please Provide Caleder Name from which you wish to read excluded dates. Plesae note Caleder Name must be defined in Orchestrator." Name="in_strCalendarName" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="Please provide exception message for invalidate calendar name. &#xA;Example : Invalid calendar name found. " Name="in_excMsgInvalidCalendarName" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Please provide exception message for invalidate calendar name. &#xD;&#xA;Example : Invalid calendar name found. " Name="in_excMsgInvalidCalendarName" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -157,10 +157,10 @@
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">730,198.33333333333334</av:Point>
                 <av:Size x:Key="ShapeSize">200,159.33333333333334</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">830,357.6666666666667 830,387.66666666666674 840.6666666666666,387.66666666666674 840.6666666666666,416.66666666666663</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">830,357.6666666666667 830,387.66666666666663 840.6666666666666,387.66666666666663 840.6666666666666,416.66666666666663</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap2010:Annotation.AnnotationText="Collects All calendar details from Orchestrator and Store it in Dictionary Object. This will be useful in next steps." DisplayName="Sequence - Get Calendar" sap:VirtualizedContainerService.HintSize="572,1204" sap2010:WorkflowViewState.IdRef="Sequence_30">
+            <Sequence sap2010:Annotation.AnnotationText="Collects All calendar details from Orchestrator and Store it in Dictionary Object. This will be useful in next steps." DisplayName="Sequence - Get Calendar" sap:VirtualizedContainerService.HintSize="200,159.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_30">
               <Sequence.Variables>
                 <Variable x:TypeArguments="njl:JObject" Name="JResponseObj" />
                 <Variable x:TypeArguments="x:Int32" Name="intCounter" />
@@ -196,19 +196,19 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:DeserializeJson>
-              <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, njl:JToken)" sap2010:Annotation.AnnotationText="Extract and append Each Calendar Name and calendar id to Dictionary Object. This will be useful in next set of Step." CurrentIndex="[intCounter]" DisplayName="For Each - Extract and Append Calendar data" sap:VirtualizedContainerService.HintSize="510,404.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[JResponseObj]">
+              <ui:ForEach x:TypeArguments="x:Object" sap2010:Annotation.AnnotationText="Extract and append Each Calendar Name and calendar id to Dictionary Object. This will be useful in next set of Step." CurrentIndex="[intCounter]" DisplayName="For Each - Extract and Append Calendar data" sap:VirtualizedContainerService.HintSize="510,404" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[JResponseObj.Properties.Skip(1).FirstOrDefault().Value]">
                 <ui:ForEach.Body>
-                  <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, njl:JToken)">
+                  <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, njl:JToken)" Name="currentKeyValuePairOfTextAndJToken" />
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="currentKeyValuePairOfTextAndJToken" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body - Extract and append calendar data" sap:VirtualizedContainerService.HintSize="476,172" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                    <Sequence DisplayName="Body - Extract and append calendar data" sap:VirtualizedContainerService.HintSize="476,171.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_34">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign - Append to Dictionary" sap:VirtualizedContainerService.HintSize="434,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_84">
+                      <Assign DisplayName="Assign - Append to Dictionary" sap:VirtualizedContainerService.HintSize="434,84" sap2010:WorkflowViewState.IdRef="Assign_84">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[dictPreviousCalendar(JResponseObj("value")(intCounter).SelectToken("Name").ToString.ToUpper)]</OutArgument>
                         </Assign.To>
@@ -221,8 +221,6 @@
                 </ui:ForEach.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
