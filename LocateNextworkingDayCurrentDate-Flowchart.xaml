@@ -7,7 +7,7 @@
     <x:Property Name="in_excMessageMaxLoopCounter" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:Annotation.AnnotationText>UPTF00000138eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiVGhpcyBmbG93Y2hhcnQgYWNjZXB0cyBDYWxlbmRlcidzIEV4Y2x1ZGVkIERheXMsIGlucHV0IGRhdGVzLCBldmFsdXRlcyBjYWxlbmRlciBsb2dpYyBhbmQgcmV0dXJuIG5leHQgcHJldmlvdXMgZGF0ZShvdXRwdXQgdmFyaWFibGUpLiIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>2521.3333333333335,2199.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2521.3333333333335,2239.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -107,7 +107,7 @@
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="This flowchart accepts calendar's Excluded Days, input dates, evalutes calendar logic and return next previous date(output variable)." DisplayName="LocateNextworkingDay Current Date - Flowchart" sap:VirtualizedContainerService.HintSize="2531.3333333333335,2134.6666666666665" sap2010:WorkflowViewState.IdRef="Flowchart_8">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="s:DateTime" Name="dt_TempDate" />
+      <Variable x:TypeArguments="s:DateTime" Name="dateTempDate" />
       <Variable x:TypeArguments="x:String" Name="strDay" />
       <Variable x:TypeArguments="x:String" Name="strInputDate" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="intLoopCounter" />
@@ -216,7 +216,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <Assign DisplayName="Assign - Conver to date Obj" sap:VirtualizedContainerService.HintSize="434,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_85">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="s:DateTime">[dt_TempDate]</OutArgument>
+                          <OutArgument x:TypeArguments="s:DateTime">[dateTempDate]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="s:DateTime">[Convert.ToDateTime(strInputDate)]</InArgument>
@@ -238,10 +238,10 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <Assign DisplayName="Assign - Get its previous date" sap:VirtualizedContainerService.HintSize="434,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_86">
                             <Assign.To>
-                              <OutArgument x:TypeArguments="s:DateTime">[dt_TempDate]</OutArgument>
+                              <OutArgument x:TypeArguments="s:DateTime">[dateTempDate]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="s:DateTime">[dt_TempDate.AddDays(-1)]</InArgument>
+                              <InArgument x:TypeArguments="s:DateTime">[dateTempDate.AddDays(-1)]</InArgument>
                             </Assign.Value>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -263,7 +263,7 @@
                                   <OutArgument x:TypeArguments="x:String">[strInputDate]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[dt_TempDate.ToString("yyyy-MM-dd")]</InArgument>
+                                  <InArgument x:TypeArguments="x:String">[dateTempDate.ToString("yyyy-MM-dd")]</InArgument>
                                 </Assign.Value>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -295,7 +295,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <Assign DisplayName="Assign - Convert to date Obj for weekend Check " sap:VirtualizedContainerService.HintSize="434,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_88">
                 <Assign.To>
-                  <OutArgument x:TypeArguments="s:DateTime">[dt_TempDate]</OutArgument>
+                  <OutArgument x:TypeArguments="s:DateTime">[dateTempDate]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
                   <InArgument x:TypeArguments="s:DateTime">[Convert.ToDateTime(strInputDate)]</InArgument>
@@ -320,7 +320,7 @@
                       <OutArgument x:TypeArguments="x:String">[strDay]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[dt_TempDate.DayOfWeek.ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[dateTempDate.DayOfWeek.ToString]</InArgument>
                     </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -351,10 +351,10 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <Assign DisplayName="Assign - Conver to date Obj - Saturday" sap:VirtualizedContainerService.HintSize="434,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_90">
                             <Assign.To>
-                              <OutArgument x:TypeArguments="s:DateTime">[dt_TempDate]</OutArgument>
+                              <OutArgument x:TypeArguments="s:DateTime">[dateTempDate]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="s:DateTime">[dt_TempDate.AddDays(-1)]</InArgument>
+                              <InArgument x:TypeArguments="s:DateTime">[dateTempDate.AddDays(-1)]</InArgument>
                             </Assign.Value>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -376,7 +376,7 @@
                                   <OutArgument x:TypeArguments="x:String">[strInputDate]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[dt_TempDate.ToString("yyyy-MM-dd")]</InArgument>
+                                  <InArgument x:TypeArguments="x:String">[dateTempDate.ToString("yyyy-MM-dd")]</InArgument>
                                 </Assign.Value>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -468,10 +468,10 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <Assign DisplayName="Assign - Conver to date Obj Sunday" sap:VirtualizedContainerService.HintSize="434,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_92">
                                 <Assign.To>
-                                  <OutArgument x:TypeArguments="s:DateTime">[dt_TempDate]</OutArgument>
+                                  <OutArgument x:TypeArguments="s:DateTime">[dateTempDate]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="s:DateTime">[dt_TempDate.AddDays(-2)]</InArgument>
+                                  <InArgument x:TypeArguments="s:DateTime">[dateTempDate.AddDays(-2)]</InArgument>
                                 </Assign.Value>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -493,7 +493,7 @@
                                       <OutArgument x:TypeArguments="x:String">[strInputDate]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[dt_TempDate.ToString("yyyy-MM-dd")]</InArgument>
+                                      <InArgument x:TypeArguments="x:String">[dateTempDate.ToString("yyyy-MM-dd")]</InArgument>
                                     </Assign.Value>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -576,7 +576,7 @@
                                   <OutArgument x:TypeArguments="x:String">[out_strPreviousDateOutput]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[dt_TempDate.ToString("yyyy-MM-dd")]</InArgument>
+                                  <InArgument x:TypeArguments="x:String">[dateTempDate.ToString("yyyy-MM-dd")]</InArgument>
                                 </Assign.Value>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
