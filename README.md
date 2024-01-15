@@ -9,12 +9,12 @@ Some important details to consider before to use it are:
  
 
 ## Features
-- [Back to menu](#features)
-- [Back to menu](#features)
+- [Activity-1](#activity-1-get-previous-working-day)
+- [Activity-2](#activity-2-get-next-working-day)
 
 
 
-## Activity 1: Get Next Working Day  
+## Activity 1: Get Previous Working Day  
  
 ### Details:
   - Business requirement is to get current working day and its previous working day from Calendar. The current date must be a working day, it should not be weekend or non-working day.  Also check its previous date, if it is weekend or non-working day then Consider its previous date. 
@@ -24,7 +24,7 @@ Note: Calendar functionality in UiPath Orchestrator allows Bot controller to def
     | --- | --- |
     | Input | in_strInputDate : string; in_strCalendarName : string; in_intMaxLoopCounter : int; in_excMsgMaxLoopCounter : string; in_excMsgInvalidCalendarName : string |
     | Output | out_strCurrentWorkingDay : string ; out_strPreviousWorkingDay : string |
-    | Input/Output | io_argument1:type; io_argument2:type; io_argument3:type;|
+    | Input/Output | |
     | Requirements | NA |
     | App Version | NA |
 
@@ -52,7 +52,7 @@ Note: Calendar functionality in UiPath Orchestrator allows Bot controller to def
     | --- | --- |
     | Input | in_strInputDate : string; in_strRequiredInputDay : string;  in_strCalendarName : string; in_excMsgInvalidCalendarName : string; in_intMaxLoopCounter : int; in_excMsgMaxLoopCounter : string; in_excMsgCalenDaysNotFound : string; |
     | Output | out_strOutDate : string ; |
-    | Input/Output | io_argument1:type; io_argument2:type; io_argument3:type;|
+    | Input/Output | |
     | Requirements | NA |
     | App Version | NA |
 
