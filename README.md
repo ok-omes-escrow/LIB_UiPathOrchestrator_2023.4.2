@@ -24,7 +24,7 @@ Note: Calendar functionality in UiPath Orchestrator allows Bot controller to def
     | --- | --- |
     | Input | in_strInputDate : string; in_strCalendarName : string; in_intMaxLoopCounter : int; in_excMsgMaxLoopCounter : string; in_excMsgInvalidCalendarName : string |
     | Output | out_strCurrentWorkingDay : string ; out_strPreviousWorkingDay : string |
-    | Input/Output | |
+    | Input/Output | NA |
     | Requirements | NA |
     | App Version | NA |
 
@@ -52,7 +52,7 @@ Note: Calendar functionality in UiPath Orchestrator allows Bot controller to def
     | --- | --- |
     | Input | in_strInputDate : string; in_strRequiredInputDay : string;  in_strCalendarName : string; in_excMsgInvalidCalendarName : string; in_intMaxLoopCounter : int; in_excMsgMaxLoopCounter : string; in_excMsgCalenDaysNotFound : string; |
     | Output | out_strOutDate : string ; |
-    | Input/Output | |
+    | Input/Output | NA |
     | Requirements | NA |
     | App Version | NA |
 
