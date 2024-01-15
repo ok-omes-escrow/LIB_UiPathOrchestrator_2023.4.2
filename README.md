@@ -9,10 +9,12 @@ Some important details to consider before to use it are:
  
 
 ## Features
+- [Back to menu](#features)
+- [Back to menu](#features)
 
-## Activity 1: Get Previous Working Day  
 
-### Details:
+
+## Activity 1: Get Next Working Day  
  
 ### Details:
   - Business requirement is to get current working day and its previous working day from Calendar. The current date must be a working day, it should not be weekend or non-working day.  Also check its previous date, if it is weekend or non-working day then Consider its previous date. 
@@ -37,4 +39,42 @@ Note: Calendar functionality in UiPath Orchestrator allows Bot controller to def
 
  
 
-- [Back to menu](#features) 
+- [Back to menu](#features)
+
+
+## Activity 2: Get Next Working Day  
+
+### Details:
+  - Business requirement is to get next working day from Calendar based on Input day. Input day must be dynamic.
+Note: Calendar functionality in UiPath Orchestrator allows Bot controller to define non-working days. Non-working days can be festivals or public holidays. This functionality offers Bot Controller to Schedule/Trigger UiPath Bots only on working days. 
+
+    | Command | Description |
+    | --- | --- |
+    | Input | in_strInputDate : string; in_strRequiredInputDay : string;  in_strCalendarName : string; in_excMsgInvalidCalendarName : string; in_intMaxLoopCounter : int; in_excMsgMaxLoopCounter : string; in_excMsgCalenDaysNotFound : string; |
+    | Output | out_strOutDate : string ; |
+    | Input/Output | io_argument1:type; io_argument2:type; io_argument3:type;|
+    | Requirements | NA |
+    | App Version | NA |
+
+
+
+  - Additional Details:
+  - Examples: in_strInputDate : 2024-01-15 ( 24th  is already declared as non-working day in calendar)
+    in_strRequiredInputDay : Wednesday 
+    Output: 2024-01-17
+
+  - Examples: input: 2024-01-17 ( 24th  is already declared as non-working day in calendar)
+    in_strRequiredInputDay : Wednesday   
+    Output: 2024-01-31 
+
+    Screenshot :
+![image](https://github.com/ok-omes-escrow/LIB_UiPathOrchestrator_2023.4.2/assets/146367950/edbb5784-d301-43a9-9201-11f5a270a1bd)
+
+
+
+
+
+
+ 
+
+- [Back to menu](#features)
