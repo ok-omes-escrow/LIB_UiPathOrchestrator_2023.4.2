@@ -1,26 +1,15 @@
 {
-  "DisplayName": "Get Previous Working Day",
+  "DisplayName": "Get Next Working Day",
   "Tooltip": null,
   "HelpLink": null,
   "Color": null,
   "OriginalIconFileName": null,
   "Arguments": [
     {
-      "Name": "in_strCalendarName",
-      "DisplayName": "in_strCalendarName",
-      "Category": null,
-      "Tooltip": "Please Provide Caleder Name from which you wish to read excluded dates. Plesae note Caleder Name must be defined in Orchestrator.",
-      "Placeholder": null,
-      "Widget": null,
-      "IsRequired": false,
-      "IsPrincipal": true,
-      "DataSourceItems": null
-    },
-    {
       "Name": "in_strInputDate",
       "DisplayName": "in_strInputDate",
       "Category": null,
-      "Tooltip": "Please Provide Search date in this format - (\"yyyy-MM-dd\").\r\nExample : 2023-12-01 \r\n",
+      "Tooltip": "Please Provide Search date in this format - (\"yyyy-MM-dd\").\r\nExample : 2024-12-01 \r\n",
       "Placeholder": null,
       "Widget": null,
       "IsRequired": false,
@@ -28,10 +17,10 @@
       "DataSourceItems": null
     },
     {
-      "Name": "out_strPreviousWorkingDay",
-      "DisplayName": "out_strPreviousWorkingDay",
+      "Name": "in_strRequiredInputDay",
+      "DisplayName": "in_strRequiredInputDay",
       "Category": null,
-      "Tooltip": "This will be output in this format - (\"yyyy-MM-dd\").\r\nExample : 2023-12-01 ",
+      "Tooltip": "Please Provide next Working day you want for want to business requirement.\r\nExample : Wednesday \r\n",
       "Placeholder": null,
       "Widget": null,
       "IsRequired": false,
@@ -39,10 +28,21 @@
       "DataSourceItems": null
     },
     {
-      "Name": "out_strCurrentWorkingDay",
-      "DisplayName": "out_strCurrentWorkingDay",
+      "Name": "out_strOutDate",
+      "DisplayName": "out_strOutDate",
       "Category": null,
-      "Tooltip": "This will be output in this format - (\"yyyy-MM-dd\").\r\nExample : 2023-12-01 ",
+      "Tooltip": "This will be output in this format - (\"yyyy-MM-dd\").\r\nExample : 2024-12-01 ",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strCalenderName",
+      "DisplayName": "in_strCalenderName",
+      "Category": null,
+      "Tooltip": "Please Provide Caleder Name from which you wish to read excluded dates. Plesae note Caleder Name must be defined in Orchestrator.",
       "Placeholder": null,
       "Widget": null,
       "IsRequired": false,
@@ -72,8 +72,8 @@
       "DataSourceItems": null
     },
     {
-      "Name": "in_excMsgMaxLoopCounter",
-      "DisplayName": "in_excMsgMaxLoopCounter",
+      "Name": "in_excMessageMaxLoopCounter",
+      "DisplayName": "in_excMessageMaxLoopCounter",
       "Category": null,
       "Tooltip": "Please provide exception message for maximum counter value reached. \r\nExample : Maximum loop attempts are reached, Please increase IntMaxLoopCounter value and try again.",
       "Placeholder": null,
