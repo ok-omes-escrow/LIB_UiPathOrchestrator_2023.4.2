@@ -1,0 +1,97 @@
+{
+  "DisplayName": "Get Next Working Day",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_strInputDate",
+      "DisplayName": "in_strInputDate",
+      "Category": null,
+      "Tooltip": "Please Provide Search date in this format - (\"yyyy-MM-dd\").\r\nExample : 2024-12-01 \r\n",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strRequiredInputDay",
+      "DisplayName": "in_strRequiredInputDay",
+      "Category": null,
+      "Tooltip": "Please Provide next Working day you want for want to business requirement.\r\nExample : Wednesday \r\n",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_strOutDate",
+      "DisplayName": "out_strOutDate",
+      "Category": null,
+      "Tooltip": "This will be output in this format - (\"yyyy-MM-dd\").\r\nExample : 2024-12-01 ",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strCalenderName",
+      "DisplayName": "in_strCalenderName",
+      "Category": null,
+      "Tooltip": "Please Provide Caleder Name from which you wish to read excluded dates. Plesae note Caleder Name must be defined in Orchestrator.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_excMsgInvalidCalendarName",
+      "DisplayName": "in_excMsgInvalidCalendarName",
+      "Category": null,
+      "Tooltip": "Please provide exception message for invalidate calendar name. \r\nExample : Invalid calendar name found. ",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_intMaxLoopCounter",
+      "DisplayName": "in_intMaxLoopCounter",
+      "Category": null,
+      "Tooltip": "Please provide the maximum number of loop iternations to perform. This counter number will prevent code from infinite loop. \r\nExample : in_intMaxLoopCounter=10 , if counter is increased by 10 then exception message will be generated. ",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_excMessageMaxLoopCounter",
+      "DisplayName": "in_excMessageMaxLoopCounter",
+      "Category": null,
+      "Tooltip": "Please provide exception message for maximum counter value reached. \r\nExample : Maximum loop attempts are reached, Please increase IntMaxLoopCounter value and try again.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_excMsgCalenDaysNotFound",
+      "DisplayName": "in_excMsgCalenDaysNotFound",
+      "Category": null,
+      "Tooltip": "Please provide exception message for Non-working days not defined in calendar.\r\nExample : No single working days found in calendar. Please check Orchestrator Non-working days in Calender.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

@@ -1,137 +1,80 @@
 # LIB_UiPathOrchestrator_2023.4.2
 
 ## Description
-The folowing documentation will present the general details about the library and its different functionalities.
+The Holiday Calendar UiPath Library Project provides calendar related functionalities.  
 Some important details to consider before to use it are:
 
-  - Application Version:
-  - Browser(s):
+  - UiPath Orchestrator Version: 2023.4.2
+  - Uipath Studio Version : 2023.4.5 
+ 
 
 ## Features
+- [Activity-1](#activity-1-get-previous-working-day)
+- [Activity-2](#activity-2-get-next-working-day)
 
-- [Activity 1](#activity-1) 
-- [Activity 2](#activity-2) 
-- [Activity 3](#activity-3) 
-- [Activity 4](#activity-4) 
-- [Activity 5](#activity-5) 
-- [Activity 6](#activity-6) 
-- [...](#activity-n)
 
-## Activity 1
+
+## Activity 1: Get Previous Working Day  
+ 
 ### Details:
-  - This activity will allow  to ...
+  - Business requirement is to get current working day and its previous working day from Calendar. The current date must be a working day, it should not be weekend or non-working day.  Also check its previous date, if it is weekend or non-working day then Consider its previous date. 
+Note: Calendar functionality in UiPath Orchestrator allows Bot controller to define non-working days. Non-working days can be festivals or public holidays. This functionality offers Bot Controller to Schedule/Trigger UiPath Bots only on working days. 
 
     | Command | Description |
     | --- | --- |
-    | Input | in_argument1 : type; in_argument2 : type; in_argument3 : type;|
-    | Output | out_argument1:type; out_argument2:type; out_argument3:type;|
-    | Input/Output | io_argument1:type; io_argument2:type; io_argument3:type;|
-    | Requirements | Show file differences that haven't been staged |
-    | App Version | Show file differences that haven't been staged |
+    | Input | in_strInputDate : string; in_strCalendarName : string; in_intMaxLoopCounter : int; in_excMsgMaxLoopCounter : string; in_excMsgInvalidCalendarName : string |
+    | Output | out_strCurrentWorkingDay : string ; out_strPreviousWorkingDay : string |
+    | Input/Output | NA |
+    | Requirements | NA |
+    | App Version | NA |
+
+
 
   - Additional Details:
-  - Examples:
+  - Examples: input: 2023-12-12 ( 12th December is already declared as non-working day in calendar)    
+    Output: Current date: 2023-12-11  &  Previous date: 2023-12-08
 
-  - [Back to menu](#features) 
-  
-## Activity 2
+    Screenshot :
+    ![image](https://github.com/ok-omes-escrow/LIB_UiPathOrchestrator_2023.4.2/assets/146367950/de7937c6-75c2-4f8c-bb74-481ede777b98)
+
+ 
+
+- [Back to menu](#features)
+
+
+## Activity 2: Get Next Working Day  
+
 ### Details:
-  - This activity will allow  to ...
+  - Business requirement is to get next working day from Calendar based on Input day. Input day must be dynamic.
+Note: Calendar functionality in UiPath Orchestrator allows Bot controller to define non-working days. Non-working days can be festivals or public holidays. This functionality offers Bot Controller to Schedule/Trigger UiPath Bots only on working days. 
 
     | Command | Description |
     | --- | --- |
-    | Input | in_argument1 : type; in_argument2 : type; in_argument3 : type;|
-    | Output | out_argument1:type; out_argument2:type; out_argument3:type;|
-    | Input/Output | io_argument1:type; io_argument2:type; io_argument3:type;|
-    | Requirements | Show file differences that haven't been staged |
-    | App Version | Show file differences that haven't been staged | 
+    | Input | in_strInputDate : string; in_strRequiredInputDay : string;  in_strCalendarName : string; in_excMsgInvalidCalendarName : string; in_intMaxLoopCounter : int; in_excMsgMaxLoopCounter : string; in_excMsgCalenDaysNotFound : string; |
+    | Output | out_strOutDate : string ; |
+    | Input/Output | NA |
+    | Requirements | NA |
+    | App Version | NA |
+
+
 
   - Additional Details:
-  - Examples:
+  - Examples: in_strInputDate : 2024-01-15 ( 24th  is already declared as non-working day in calendar)
+    in_strRequiredInputDay : Wednesday 
+    Output: 2024-01-17
 
-  - [Back to menu](#features) 
-  
-## Activity 3
-### Details:
-  - This activity will allow  to ...
+  - Examples: input: 2024-01-17 ( 24th  is already declared as non-working day in calendar)
+    in_strRequiredInputDay : Wednesday   
+    Output: 2024-01-31 
 
-    | Command | Description |
-    | --- | --- |
-    | Input | in_argument1 : type; in_argument2 : type; in_argument3 : type;|
-    | Output | out_argument1:type; out_argument2:type; out_argument3:type;|
-    | Input/Output | io_argument1:type; io_argument2:type; io_argument3:type;|
-    | Requirements | Show file differences that haven't been staged |
-    | App Version | Show file differences that haven't been staged |  
+    Screenshot :
+![image](https://github.com/ok-omes-escrow/LIB_UiPathOrchestrator_2023.4.2/assets/146367950/edbb5784-d301-43a9-9201-11f5a270a1bd)
 
-  - Additional Details:
-  - Examples:
 
-  - [Back to menu](#features) 
-  
-## Activity 4
-### Details:
-  - This activity will allow  to ...
 
-    | Command | Description |
-    | --- | --- |
-    | Input | in_argument1 : type; in_argument2 : type; in_argument3 : type;|
-    | Output | out_argument1:type; out_argument2:type; out_argument3:type;|
-    | Input/Output | io_argument1:type; io_argument2:type; io_argument3:type;|
-    | Requirements | Show file differences that haven't been staged |
-    | App Version | Show file differences that haven't been staged |  
 
-  - Additional Details:
-  - Examples:
 
-  - [Back to menu](#features) 
-  
-## Activity 5
-### Details:
-  - This activity will allow  to ...
 
-    | Command | Description |
-    | --- | --- |
-    | Input | in_argument1 : type; in_argument2 : type; in_argument3 : type;|
-    | Output | out_argument1:type; out_argument2:type; out_argument3:type;|
-    | Input/Output | io_argument1:type; io_argument2:type; io_argument3:type;|
-    | Requirements | Show file differences that haven't been staged |
-    | App Version | Show file differences that haven't been staged |
+ 
 
-  - Additional Details:
-  - Examples:
-  
-## Activity 6
-You can also:
-### Details:
-  - This activity will allow  to ...
-
-    | Command | Description |
-    | --- | --- |
-    | Input | in_argument1 : type; in_argument2 : type; in_argument3 : type;|
-    | Output | out_argument1:type; out_argument2:type; out_argument3:type;|
-    | Input/Output | io_argument1:type; io_argument2:type; io_argument3:type;|
-    | Requirements | Show file differences that haven't been staged |
-    | App Version | Show file differences that haven't been staged | 
-
-  - Additional Details:
-  - Examples:
-
-  - [Back to menu](#features)
-    
-## Activity N
-You can also:
-### Details:
-  - This activity will allow  to ...
-
-    | Command | Description |
-    | --- | --- |
-    | Input | in_argument1 : type; in_argument2 : type; in_argument3 : type;|
-    | Output | out_argument1:type; out_argument2:type; out_argument3:type;|
-    | Input/Output | io_argument1:type; io_argument2:type; io_argument3:type;|
-    | Requirements | Show file differences that haven't been staged |
-    | App Version | Show file differences that haven't been staged |
-
-  - Additional Details:
-  - Examples:
-    
-- [Back to menu](#features) 
+- [Back to menu](#features)
