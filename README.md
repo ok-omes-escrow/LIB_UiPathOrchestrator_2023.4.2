@@ -9,8 +9,8 @@ Some important details to consider before to use it are:
  
 
 ## Features
-- [Activity-1](#activity-1-get-previous-working-day)
-- [Activity-2](#activity-2-get-next-working-day)
+- [Activity-1 : Get Previous Working Day](#activity-1-get-previous-working-day)
+- [Activity-2 : Get Next Working Day](#activity-2-get-next-working-day)
 
 
 
